@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    
+    background-image: url(../Fotot/white.jpg);
+    background-size: 100%;
+    
+}
+
+/*NavBar*/
+
+#p1{
+    margin-top: 25px;
+}
+
+.navbar {
+    
+    overflow: hidden;
+    text-decoration: none;
+    background-color:#9ADCFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+   
+}
+.logoMove{
+    display: flex;
+    position: relative;
+    left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#pad{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+.ula {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-family: serif;
+    
+}
+
+.ulnav {
+    display: inline-flex;
+    margin-top: 20px;
+    padding-right: 50px;
+    
+}
+
+
+.navlist{
+    display: flex;
+    padding-left: 60px;
+    
+   
+}
+
+.ulnav a:hover {
+    color: white;
+}
+.logo {
+    max-width: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+/*Main*/
+
+.heading > h1 {
+    font-size: 35px;
+    font-style: italic;
+    font-family: serif; 
+    text-align: center;
+    margin-top: 35px;
+    
+    }
+
+.button {
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: lightskyblue;
+    
+}   
+
+.btnA{
+    text-decoration: none;
+    color: black;
+}
+
+.button :hover{
+    color: aliceblue;
+}
+
+
+#mainColums{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.mainimg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.leftcolum {
+    text-align: center;
+}
+
+.rightcolum {
+    
+   text-align: center;
+}
+
+.clothes {
+    width: 555px;
+    border-radius: 30px;
+    
+}
+
+.money {
+    width: 565px;
+    border-radius: 30px;
+}
+
+
+.main {
+    
+    width: 1519px;
+    opacity: 80%;
+    
+}
+
+/*Footer*/
+.footer{
+    
+    display: flex;
+    flex-direction: row;
+    background-color: #141E27;
+    flex-wrap: wrap;
+    
+}
+
+.footercolum1{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.footercolum1 > h4{
+    font-size: 20px;
+}
+
+.footercolum2{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 50px;
+    
+    
+}
+.footercolum2 > h4{
+    display: flex;
+    position: relative;
+    left: 93px;
+    font-size: 20px;
+}
+
+.ulfooter a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: serif;
+    position: relative;
+    top: 8px;
+}
+
+.ulfooter{
+    list-style-type: none;
+    color: white;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.logolast{
+    
+    width: 170px;
+    padding-bottom: 50px;
+    padding-top: 14px;
+    
+}
+
+.logofooter {
+  display: flex;
+  position: relative;
+  left: 10%;
+  top: 10px;
+  justify-content: end;
+  flex-wrap: wrap;
+   
+    
+    
+}
+
+
+
+    
+    
+    
+    
+     
+    

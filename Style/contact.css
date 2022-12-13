@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../Fotot/white.jpg);
+    background-size: 100%;
+
+}
+
+
+
+#p1{
+    margin-top: 25px;
+}
+
+.navbar {
+    
+    overflow: hidden;
+    text-decoration: none;
+    background-color:#9ADCFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+   
+}
+.logoMove{
+    display: flex;
+    position: relative;
+    left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#pad{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+.ula {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-family: serif;
+    
+    
+}
+
+.ulnav {
+    display: inline-flex;
+    margin-top: 20px;
+    padding-right: 50px;
+    
+}
+.navlist{
+    display: flex;
+    padding-left: 60px;
+   
+}
+
+.ulnav a:hover {
+    color: white;
+}
+.logo {
+    max-width: 70px;
+}
+
+
+.main-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#mainSize{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.form-style {
+    margin: 10px auto;
+    width: 400px;
+    padding: 20px 12px 10px 20px;
+    font-size: 17px 
+}
+
+.form-style td {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.form-style label {
+    margin: 0 0 3px 0;
+    padding: 0px;
+    display: block;
+    font-weight: bold;
+}
+
+
+
+.form-style input[type=submit],
+.form-style input[type=reset] {
+    background: #4eb5f1;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    color: #fff;
+}
+.form-style input[type=reset]{
+    margin-left: 10px;
+    
+}
+
+.form-style input[type=submit]:hover,
+.form-style input[type=reset]:hover {
+    background-color: cornflowerblue;
+    box-shadow: none;
+    
+}
+
+.form-style .field-textarea {
+    height: 100px;
+}
+
+.form-style input[type=text],
+.form-style input[type=email],
+textarea {
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #BEBEBE;
+    padding: 7px;
+    margin: 0px;
+    outline: none;
+}
+
+.form-style .long {
+    width: 100%;
+}
+
+.form-style input[type=text]:focus,
+.form-style input[type=email]:focus,
+.form-style textarea:focus     {
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+.rightsidee img {
+    max-width: 550px;
+    border-radius: 25px;
+    opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+    left: 80px;
+    top: 20px;
+    
+}
+
+.footer{
+    
+    display: flex;
+    flex-direction: row;
+    background-color: #141E27;
+    flex-wrap: wrap;
+}
+
+.footercolum1{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.footercolum1 > h4{
+    font-size: 20px;
+}
+
+.footercolum2{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 50px;
+}
+.footercolum2 > h4{
+    display: flex;
+    position: relative;
+    left: 93px;
+    font-size: 20px;
+}
+
+.ulfooter a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: serif;
+    position: relative;
+    top: 8px;
+}
+
+.ulfooter{
+    list-style-type: none;
+    color: white;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.logolast{
+    
+    width: 170px;
+    padding-bottom: 50px;
+    padding-top: 14px;
+    
+}
+
+.logofooter {
+  display: flex;
+  position: relative;
+  left: 10%;
+  top: 10px;
+  justify-content: end;
+  flex-wrap: wrap;
+   
+}
