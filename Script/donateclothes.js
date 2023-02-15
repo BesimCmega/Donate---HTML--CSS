@@ -6,6 +6,7 @@ var email = document.forms["myForm"]["email"];
 var number = document.forms["myForm"]["number"];
 var adress = document.forms["myForm"]["adress"]; 
 var clothes = document.forms["myForm"]["clothes"]; 
+//window.href.location = ''
 
 if (name.value == "")                                  
     { 
