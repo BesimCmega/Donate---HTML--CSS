@@ -1,3 +1,4 @@
+
 body {
     background-image: url(../Fotot/white.jpg);
     background-size: 100%;
@@ -107,4 +108,7 @@ input{
 #dnButt:hover{
     color: #141E27;
     cursor: pointer;
-}
+
+    }
+
+
