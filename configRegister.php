@@ -1,11 +1,11 @@
 <?php
 
 class DatabaseRegister{
-    private $server = 'localhost';
-    private $username = 'root';
-    private $password;
-    private $database = 'donate';
-    private $conn;
+    public $server = 'localhost';
+    public $username = 'root';
+    public $password;
+    public $database = 'donate';
+    public $conn;
 
     public function __construct(){
         try{
@@ -33,6 +33,17 @@ class DatabaseRegister{
                 echo "<script>window.location.href = 'index.php';</script>";
             }
         }
+    }
+
+    public function fetch(){
+        $data = null;
+        $query = "SELECT * FROM user_tbl";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
     }
 
     public function check(){

@@ -21,12 +21,12 @@
                 <p id="p1"></p>
         
                 <ul class="ulnav">
-                    <li class="navlist"><a class="ula" href="home.html">Home</a></li>
+                    <li class="navlist"><a class="ula" href="index.php">Home</a></li>
                     <li class="navlist">
-                        <a class="ula" href="aboutus.html">About Us</a>
+                        <a class="ula" href="aboutus.php">About Us</a>
                     </li>
                     <li class="navlist">
-                        <a class="ula" href="contact.html">Contact</a>
+                        <a class="ula" href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -35,10 +35,10 @@
         
         <ul class="ulnav">
             
-                <a class="ula" id="pad" href="register.html">Register</a>
+                <a class="ula" id="pad" href="register.php">Register</a>
             </li>
             <li class="navlist">
-                <a class="ula" id="pad" href="login.html">Login</a>
+                <a class="ula" id="pad" href="login.php">Login</a>
             </li>
         </ul>
         
@@ -89,11 +89,11 @@
             
             <ul class="ulfooter">
                 
-                <li class="lifooter"><a href="home.html">Home</a></li>
-                <li class="lifooter"><a href="aboutus.html">About Us</a></li>
-                <li class="lifooter"> <a href="contact.html">Contact</a></li>
-                <li class="lifooter"> <a href="register.html"> <p> Register </p></a></li>
-                <li class="lifooter"> <a href="login.html"> <p> Login </p></a></li>
+                <li class="lifooter"><a href="index.php">Home</a></li>
+                <li class="lifooter"><a href="aboutus.php">About Us</a></li>
+                <li class="lifooter"> <a href="contact.php">Contact</a></li>
+                <li class="lifooter"> <a href="register.php"> <p> Register </p></a></li>
+                <li class="lifooter"> <a href="login.php"> <p> Login </p></a></li>
             
             </ul>
         

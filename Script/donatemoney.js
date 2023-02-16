@@ -52,8 +52,7 @@ function validateDonateClothesForm() {
             document.getElementById('errortext').innerHTML="Please write some valid  clothes!"; 
             return false; 
         }else{
-            document.getElementById('errortext').innerHTML=""; 
-            alert("Thank you for Donating, and trusting us! We will give the money to somebody in need of them!");  
+            document.getElementById('errortext').innerHTML="";   
         }
     
     }

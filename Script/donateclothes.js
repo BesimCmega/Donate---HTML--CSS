@@ -54,7 +54,6 @@ if (name.value == "")
         return false; 
     }else{
         document.getElementById('errortext').innerHTML=""; 
-        alert("Thank you for Donating, and trusting us! We will give the clothes to somebody in need of them!");  
     }
 
 }
