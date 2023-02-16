@@ -234,6 +234,7 @@ body {
 
 @media screen and (max-width: 680px) {
 
+
     .logo{
         display: none;
     }
@@ -246,8 +247,6 @@ body {
     
     }
     
-   
-    
     .navlist {
         
         padding-left: 10px;
@@ -258,7 +257,7 @@ body {
     #mainColums {
 
         flex-direction: column;
-        
+        background-color: red;
 
     }
 

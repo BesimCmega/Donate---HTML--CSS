@@ -19,12 +19,12 @@
 
 
                     <ul class="ulnav">
-                        <li class="navlist"><a class="ula" href="home.html">Home</a></li>
+                        <li class="navlist"><a class="ula" href="index.php">Home</a></li>
                         <li class="navlist">
-                            <a class="ula" href="aboutus.html">About Us</a>
+                            <a class="ula" href="aboutus.php">About Us</a>
                         </li>
                         <li class="navlist">
-                            <a class="ula" href="contact.html">Contact</a>
+                            <a class="ula" href="contact.php">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -33,10 +33,10 @@
 
             <ul class="ulnav">
 
-                <a class="ula" id="pad" href="register.html">Register</a>
+                <a class="ula" id="pad" href="register.php">Register</a>
                 </li>
                 <li class="navlist">
-                    <a class="ula" id="pad" href="login.html">Login</a>
+                    <a class="ula" id="pad" href="login.php">Login</a>
                 </li>
             </ul>
 
@@ -61,9 +61,9 @@
         <div class="leftcolum">
 
             <img src="Fotot/clothes.jpg" class="clothes"><br><br>
-            <a href="donateclothes.html">
+            <a href="donateclothes.php">
 
-                <button type="button" class="button"> <a class="btnA" href="donateclothes.html"> Donate Clothes
+                <button type="button" class="button"> <a class="btnA" href="donateclothes.php"> Donate Clothes
                     </a></button><br><br>
             </a>
 
@@ -73,9 +73,9 @@
         <div class="rightcolum">
             <img class="money" src="Fotot/money.jpg"><br><br>
 
-            <a href="donatemoney.html">
+            <a href="donatemoney.php">
 
-                <button type="button" class="button"> <a class="btnA" href="donatemoney.html">Donate
+                <button type="button" class="button"> <a class="btnA" href="donatemoney.php">Donate
                         Money</a></button><br><br>
             </a>
 
@@ -103,19 +103,19 @@
 
                 <ul class="ulfooter">
 
-                    <li class="lifooter"><a href="home.html">
+                    <li class="lifooter"><a href="index.php">
                             <p> Home </p> </a> 
                     </li>
-                    <li class="lifooter"><a href="aboutus.html">
+                    <li class="lifooter"><a href="aboutus.php">
                             <p>About Us</p>
                         </a></li>
-                    <li class="lifooter"> <a href="contact.html">
+                    <li class="lifooter"> <a href="contact.php">
                             <p> Contact </p>
                         </a></li>
-                    <li class="lifooter"> <a href="register.html">
+                    <li class="lifooter"> <a href="register.php">
                             <p> Register </p>
                         </a></li>
-                    <li class="lifooter"> <a href="login.html">
+                    <li class="lifooter"> <a href="login.php">
                             <p> Login </p>
                         </a></li>
 

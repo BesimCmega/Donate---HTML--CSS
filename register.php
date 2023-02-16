@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +12,18 @@
 <body>
 
     <main>
+        
         <div class="formStyle">
+
+        <?php
+            include 'configRegister.php';
+            $registeri = new DatabaseRegister();
+            $insert = $registeri->insert();
+
+            ?>
+        <!-- onsubmit="return validateFormRegister()" -->
             <p id="registerForm">Register</p>
-            <form action="./login.html" name="myForm" onsubmit="return validateFormRegister()">
+            <form action="" onsubmit="return validateFormRegister()" name="myForm"  method="post">
             <label for="name" class="arrangeLabel" id="pak1">Name: </label><br>
             <input type="text" placeholder="Enter name..." name="name"><br>
             <span class="error" id="errorname"></span><br>
@@ -27,9 +38,15 @@
 
             <label for="password" class="arrangeLabel" id="pak4">Password: </label><br>
             <input type="password" placeholder="Enter password..." name="password"><br> 
-            <span class="error" id="errorpassword"></span><br>
+            <span class="error" id="errorpassword"></span><br> 
+
+            <label for="password" class="arrangeLabel" id="pak5">Role: </label>
+            <select name="user_type" id="selektimi">
+                    <option value="user">user</option>
+                    <option value="admin">admin</option>
+            </select><br>
             
-            <input type="submit" value="Register" id="dnButt"><br>
+            <input type="submit" name ="submit" value="Register" id="dnButt"><br>
             
             </form>
         </div>

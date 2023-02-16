@@ -10,9 +10,18 @@
 <body>
 
     <main>
+    
         <div class="formStyle">
             <p id="loginForm">Login</p>
-            <form action="./home.html" name="myForm" onsubmit="return validateFormLogin()">
+
+            <?php
+                include 'configRegister.php';
+                $logini = new DatabaseRegister();
+                $check = $logini->check();
+               
+         ?>    
+         <!-- onsubmit="return validateFormLogin()" -->
+            <form action="" name="myForm"  method="post">
                 
             <label for="email" class="arrangeLabel" id="pak1">Email: </label>
             <input type="email" placeholder="Enter email" id="emaili" name="email"><br>
@@ -23,7 +32,7 @@
             <span class="error" id="errorpassword"></span>
 
             <p id="dont">You don't have an account? <a href="register.html"> Register here </a></p>
-            <input type="submit" value="Login" id="dnButt"><br>
+            <input type="submit" name="submit" value="Login" id="dnButt"><br>
             <h1 id="testim"></h1>
             </form>
         </div>
