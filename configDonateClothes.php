@@ -58,7 +58,7 @@ class DatabaseDonateClothes{
          
                if($row['email'] == $email){
                 
-                echo "<script>alert('You have logged in successfuly. Thank you for your donation. God bless you!!');</script>";
+                echo "<script>alert('Thank you for your donation. God bless you!!');</script>";
                 echo "<script>window.location.href = 'index.php';</script>";
                 $this->insert();
                }

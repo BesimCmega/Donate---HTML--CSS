@@ -53,6 +53,7 @@ class DatabaseRegister{
             
             $email = $_POST['email']; 
             $password = $_POST['password'];
+            $user_type = $_POST['user_type'];
          
             $select = "SELECT * FROM register WHERE email = '$email' && password = '$password' ";
          
@@ -62,12 +63,12 @@ class DatabaseRegister{
          
                $row = mysqli_fetch_array($result);
          
-               if($row['email'] == $email){
+               if($row['user_type'] == 'admin'){
          
                 echo "<script>alert('You have logged in successfuly!!');</script>";
-                echo "<script>window.location.href = 'index.php';</script>";
+                echo "<script>window.location.href = './Dashboards/dashboard.php';</script>";
                }
-               elseif($row['password'] == $password){
+               elseif($row['user_type'] == 'user'){
          
                 echo "<script>alert('You have been logged in successfuly!!');</script>";
                 echo "<script>window.location.href = 'index.php';</script>";

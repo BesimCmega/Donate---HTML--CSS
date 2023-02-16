@@ -1,4 +1,4 @@
-function validateDonateClothesForm() {                                 
+function validateDonateMoneyForm() {                                 
 
     var name = document.forms["myForm"]["name"];
     var surname = document.forms["myForm"]["surname"];

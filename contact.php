@@ -47,8 +47,15 @@
     
         
         <div class="leftside">
+
+        <?php
+            include 'configContact.php';
+            $contactForm = new DatabaseDonateContact();
+            $check = $contactForm->check();
+        
+        ?>
     
-        <form name="myForm" onsubmit="return validateForm()">
+        <form name="myForm" onsubmit="return validateForm()" method="post">
          <table class="form-style">
             <tr>
                <td>
@@ -86,7 +93,7 @@
             <tr>
                <td></td>
                <td>
-                  <input class="btni" type="submit" value="Send">      
+                  <input class="btni" type="submit" name ="submit" value="Send">      
                   <input type="reset" value="Reset"> 
                </td>
             </tr>

@@ -1,5 +1,5 @@
 <?php
-class DatabaseDonateMoney{
+class DatabaseDonateContact{
     private $server = 'localhost';
     private $username = 'root';
     private $password;
@@ -19,17 +19,15 @@ public function insert(){
     if(isset($_POST['submit'])){
 
         $name = $_POST['name'];
-        $surname = $_POST['surname'];
         $email = $_POST['email']; 
-        $number = $_POST['number'];
-        $adress = $_POST['adress'];
-        $money = $_POST['money'];
+        $message = $_POST['message'];
+        
        
 
-        $query = "INSERT INTO donate_money(name, surname, email, phoneNumber, address, money) VALUES ('$name', '$surname','$email', '$number', '$adress', '$money')";
+        $query = "INSERT INTO contact(name, email, message) VALUES ('$name', '$email', '$message')";
         if ($sql = $this->conn->query($query)) {
 
-            echo "<script>alert('Thank you for your donation. God bless you!!');</script>";
+            echo "<script>alert('Thank you for contacting us. We will inform you ASAP!');</script>";
             echo "<script>window.location.href = 'index.php';</script>";
         }
 
@@ -58,7 +56,7 @@ public function check(){
      
            if($row['email'] == $email){
             
-            echo "<script>alert('Thank you for your donation. God bless you!!');</script>";
+            echo "<script>alert('Thank you for contacting us. We will inform you ASAP!');</script>";
             echo "<script>window.location.href = 'index.php';</script>";
             $this->insert();
            }
@@ -74,7 +72,7 @@ public function check(){
 
  public function fetch(){
     $data = null;
-    $query = "SELECT * FROM donate_money";
+    $query = "SELECT * FROM contact";
     if ($sql = $this->conn->query($query)) {
         while ($row = mysqli_fetch_assoc($sql)) {
             $data[] = $row;
@@ -87,7 +85,7 @@ public function check(){
 
 public function delete($id){
 
-    $query = "DELETE FROM donate_money where id = '$id'";
+    $query = "DELETE FROM contact where id = '$id'";
     if ($sql = $this->conn->query($query)) {
         return true;
     }else{
@@ -99,7 +97,7 @@ public function edit($id){
 
     $data = null;
 
-    $query = "SELECT * FROM donate_money WHERE id = '$id'";
+    $query = "SELECT * FROM contact WHERE id = '$id'";
     if ($sql = $this->conn->query($query)) {
         while($row = $sql->fetch_assoc()){
             $data = $row;
@@ -110,7 +108,7 @@ public function edit($id){
 
 public function update($data){
     
-    $query = "UPDATE donate_money SET name='$data[name]', surname='$data[surname]', email='$data[email]', phoneNumber='$data[number]', address='$data[address]', money='$data[money]'  WHERE id='$data[id] '";
+    $query = "UPDATE contact SET name='$data[name]',  email='$data[email]',  message='$data[message]',   WHERE id='$data[id] '";
 
     if ($sql = $this->conn->query($query)) {
         return true;

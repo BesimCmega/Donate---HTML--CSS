@@ -33,7 +33,7 @@ function validateForm()
         return false; 
     } else{
         document.getElementById('errormsg').innerHTML="";
-        alert("Thank you for contacting us! We will answer soon!");  
+       
     }
    
     

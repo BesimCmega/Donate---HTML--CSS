@@ -56,7 +56,7 @@
             $donateMoneyRegister = new DatabaseDonateMoney();
             $check = $donateMoneyRegister->check();
         ?>
-        <form name="myForm" onsubmit="return validateDonateClothesForm()">
+        <form name="myForm" onsubmit="return validateDonateMoneyForm()" method="post">
             <div>
                 <label for="formName" class="form-label">Name: <br></label>
                 <input type="text" class="formStyle" id="formName" name="name" placeholder="Write your name here..."><br>
