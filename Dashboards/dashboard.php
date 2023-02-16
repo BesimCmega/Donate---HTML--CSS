@@ -16,22 +16,22 @@
 		<div class="card">
 			<h2>Users</h2>
 			<p>Registered Users</p>
-			<a href="#">View Users</a>
+			<a href="userDashboard.php">View Users</a>
 		</div>
 		<div class="card">
 			<h2>Contact</h2>
 			<p>Number of Contacts</p>
-			<a href="#">View Contact</a>
+			<a href="contactDashboard.php">View Contact</a>
 		</div>
 		<div class="card">
 			<h2>Money Donations</h2>
 			<p>User Donations</p>
-			<a href="#">View Donations</a>
+			<a href="moneyDashboard.php">View Donations</a>
 		</div>
         <div class="card">
 			<h2>Clothes Donations</h2>
 			<p>User Donations</p>
-			<a href="#">View Donations</a>
+			<a href="clothesDashboard.php">View Donations</a>
 		</div>
 	</div>
     

@@ -35,9 +35,29 @@ class DatabaseRegister{
         }
     }
 
+    public function insert2(){
+        if(isset($_POST['submit'])){
+
+            $name = $_POST['name'];
+            $surname = $_POST['surname'];
+            $email = $_POST['email']; 
+            $password = $_POST['password'];
+            $user_type = $_POST['user_type'];
+
+            $query = "INSERT INTO register(name, surname, email, password, user_type) VALUES ('$name', '$surname','$email', '$password', '$user_type')";
+            if ($sql = $this->conn->query($query)) {
+                echo "<script>alert('You have been registered successfully!!');</script>";
+                echo "<script>window.location.href = 'userDashboard.php';</script>";
+            }else{
+                echo "<script>alert('The user already exists!');</script>";
+                echo "<script>window.location.href = 'userDashboard.php';</script>";
+            }
+        }
+    }
+
     public function fetch(){
         $data = null;
-        $query = "SELECT * FROM user_tbl";
+        $query = "SELECT * FROM register";
         if ($sql = $this->conn->query($query)) {
             while ($row = mysqli_fetch_assoc($sql)) {
                 $data[] = $row;
@@ -110,7 +130,7 @@ class DatabaseRegister{
 
     public function update($data){
 
-        $query = "UPDATE register SET name='$data[name]', surname='$data[surnname]', email='$data[email]', password='$data[password]', user_type='$data[user_type]'' WHERE id='$data[id] '";
+        $query = "UPDATE register SET name='$data[name]', surname='$data[surname]', email='$data[email]', password='$data[password]', user_type='$data[user_type]' WHERE id='$data[id] '";
 
         if ($sql = $this->conn->query($query)) {
             return true;
