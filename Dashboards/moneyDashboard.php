@@ -24,7 +24,7 @@
           <th>Email</th>
           <th>Phone Number</th>
           <th>Address</th>
-          <th>Money</th>
+          <th>Money(€)</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -34,13 +34,13 @@
         include '../configDonateMoney.php';
         $money = new DatabaseDonateMoney();
         $rows = $money->fetch();
-        $i = 1;
+      
         if(!empty($rows)){
         foreach($rows as $row){ 
        ?>
         <tr>
                 
-                <td><?php echo $i++; ?></td>
+                <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['surname']; ?></td>
                 <td><?php echo $row['email']; ?></td>
@@ -49,6 +49,7 @@
                 <td><?php echo $row['money']; ?></td>
                 <td>
                   <a href="moneyDelete.php?id=<?php echo $row['id']; ?>" class="btn btn1">Delete</a>
+                  <a href="moneyEdit.php?id=<?php echo $row['id']; ?>" class="btn btn2">Edit</a>
                   
                 </td>
               </tr>

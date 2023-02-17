@@ -24,7 +24,15 @@ class DatabaseDonateClothes{
             $number = $_POST['number'];
             $adress = $_POST['adress'];
             $clothes = $_POST['clothes'];
-            $image = $_POST['image'];
+            //$image = $_FILES['image'];
+
+            $tempname = $_FILES['image']['tmp_name'];
+            $originalname =$_FILES['image']['name'];
+            $size =($_FILES['image']['size']/5242888). "MB<br>";
+            $type=$_FILES['image']['type'];
+            $image=$_FILES['image']['name'];
+            move_uploaded_file($_FILES['image']['tmp_name'],"Fotot/".$_FILES['image']['name']);
+            
     
             $query = "INSERT INTO donate_clothes(name, surname, email, phoneNumber, address, clothes, images) VALUES ('$name', '$surname','$email', '$number', '$adress', '$clothes', '$image')";
             if ($sql = $this->conn->query($query)) {
@@ -67,6 +75,38 @@ class DatabaseDonateClothes{
             else{
                 echo "<script>alert('The email is invalid. Go register first please!');</script>";
                 echo "<script>window.location.href = 'register.php';</script>";
+            }
+         
+         };
+    }
+
+    public function check2(){
+        
+        if(isset($_POST['submit'])){
+
+            
+            $email = $_POST['email']; 
+            
+         
+            $select = "SELECT * FROM register WHERE email = '$email' ";
+         
+            $result = mysqli_query($this->conn, $select);
+         
+            if(mysqli_num_rows($result) > 0){
+         
+               $row = mysqli_fetch_array($result);
+         
+               if($row['email'] == $email){
+                
+                echo "<script>alert('Thank you for your donation. God bless you!!');</script>";
+                echo "<script>window.location.href = 'clothesDashboard.php';</script>";
+                $this->insert();
+               }
+              
+            }
+            else{
+                echo "<script>alert('The email is invalid. Go register first please!');</script>";
+                echo "<script>window.location.href = 'userDashboard.php';</script>";
             }
          
          };

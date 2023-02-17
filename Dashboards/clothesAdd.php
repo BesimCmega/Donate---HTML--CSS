@@ -13,9 +13,9 @@
   <div class="container">
     <h1>Users</h1>
         <?php
-            include '../configDonateMoney.php';
-            $money = new DatabaseDonateMoney();
-            $insert = $money->check2();
+            include '../configDonateClothes.php';
+            $clothes = new DatabaseDonateClothes();
+            $insert = $clothes->check2();
 
             ?>
        <form action="" method="post">
@@ -34,8 +34,10 @@
       <label for="adress">Address</label>
       <input type="text" id="adress" name="adress" required>
 
-      <label for="money">Money(€)</label>
-      <input type="number" id="money" name="money" required><br><br>
+      <label for="clothes">Clothes</label>
+      <input type="text" id="clothes" name="clothes" required><br><br>
+
+      <input type="file" name="image" id="image"><br><br>
       
            
     

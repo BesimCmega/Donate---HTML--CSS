@@ -33,13 +33,13 @@
         include '../configRegister.php';
         $databaseRegister = new DatabaseRegister();
         $rows = $databaseRegister->fetch();
-        $i = 1;
+        
         if(!empty($rows)){
         foreach($rows as $row){ 
        ?>
         <tr>
                 
-                <td><?php echo $i++; ?></td>
+                <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['surname']; ?></td>
                 <td><?php echo $row['email']; ?></td>

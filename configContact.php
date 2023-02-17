@@ -70,6 +70,38 @@ public function check(){
      };
  }
 
+ public function check2(){
+    
+    if(isset($_POST['submit'])){
+
+        
+        $email = $_POST['email']; 
+        
+     
+        $select = "SELECT * FROM register WHERE email = '$email' ";
+     
+        $result = mysqli_query($this->conn, $select);
+     
+        if(mysqli_num_rows($result) > 0){
+     
+           $row = mysqli_fetch_array($result);
+     
+           if($row['email'] == $email){
+            
+            echo "<script>alert('Contact Form has been updated successfully!!');</script>";
+            echo "<script>window.location.href = 'contactDashboard.php';</script>";
+            $this->insert();
+           }
+          
+        }
+        else{
+            echo "<script>alert('The email is invalid. Go register first please!');</script>";
+            echo "<script>window.location.href = 'userDashboard.php';</script>";
+        }
+     
+     };
+ }
+
  public function fetch(){
     $data = null;
     $query = "SELECT * FROM contact";
@@ -108,7 +140,7 @@ public function edit($id){
 
 public function update($data){
     
-    $query = "UPDATE contact SET name='$data[name]',  email='$data[email]',  message='$data[message]',   WHERE id='$data[id] '";
+    $query = "UPDATE contact SET name='$data[name]',  email='$data[email]',  message='$data[message]' WHERE id='$data[id] '";
 
     if ($sql = $this->conn->query($query)) {
         return true;

@@ -22,7 +22,7 @@
                
          ?>    
          <!-- onsubmit="return validateFormLogin()" -->
-            <form action="" name="myForm"  method="post">
+            <form action="" name="myForm"  method="post" onsubmit="return validateFormLogin()">
                 
             <label for="email" class="arrangeLabel" id="pak1">Email: </label>
             <input type="email" placeholder="Enter email" id="emaili" name="email"><br>
@@ -32,7 +32,7 @@
             <input type="password" placeholder="Enter password" id="passi" name="password">
             <span class="error" id="errorpassword"></span>
 
-            <p id="dont">You don't have an account? <a href="register.html"> Register here </a></p>
+            <p id="dont">You don't have an account? <a href="register.php"> Register here </a></p>
             <input type="submit" name="submit" value="Login" id="dnButt"><br>
             <h1 id="testim"></h1>
             </form>

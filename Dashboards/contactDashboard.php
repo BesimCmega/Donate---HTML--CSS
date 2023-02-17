@@ -31,18 +31,19 @@
         include '../configContact.php';
         $contact = new DatabaseDonateContact();
         $rows = $contact->fetch();
-        $i = 1;
+        
         if(!empty($rows)){
         foreach($rows as $row){ 
        ?>
         <tr>
                 
-                <td><?php echo $i++; ?></td>
+                <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['message']; ?></td>
                 <td>
                   <a href="contactDelete.php?id=<?php echo $row['id']; ?>" class="btn btn1">Delete</a>
+                  <a href="contactEdit.php?id=<?php echo $row['id']; ?>" class="btn btn2">Edit</a>
                   
                 </td>
               </tr>
