@@ -27,10 +27,11 @@
       <input type="email" id="email" name="email" required>
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
+      <label for="user_type">Role:</label>
       <select name="user_type" id="selektimi" required>
                     <option value="user" name="user">user</option>
                     <option value="admin" name ="admin">admin</option>
-            </select><br><br>
+        </select><br><br>
     
 
       <button type="submit" name="submit">Add User</button>

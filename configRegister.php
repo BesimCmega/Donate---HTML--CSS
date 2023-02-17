@@ -73,13 +73,19 @@ class DatabaseRegister
             $password = $_POST['password'];
             $user_type = $_POST['user_type'];
 
-            $query = "INSERT INTO register(name, surname, email, password, user_type) VALUES ('$name', '$surname','$email', '$password', '$user_type')";
-            if ($sql = $this->conn->query($query)) {
-                echo "<script>alert('You have been registered successfully!!');</script>";
-                echo "<script>window.location.href = 'userDashboard.php';</script>";
+            if ($this->emailExists()) {
+                echo "<script>alert('A user with this email already exists!')</script>";
+                echo "<script>window.location.href = 'userAdd.php';</script>";
+                return;
             } else {
-                echo "<script>alert('The user already exists!');</script>";
-                echo "<script>window.location.href = 'userDashboard.php';</script>";
+                $query = "INSERT INTO register(name, surname, email, password, user_type) VALUES ('$name', '$surname','$email', '$password', '$user_type')";
+                if ($sql = $this->conn->query($query)) {
+                    echo "<script>alert('You have been registered successfully!!');</script>";
+                    echo "<script>window.location.href = 'userDashboard.php';</script>";
+                } else {
+                    echo "<script>alert('The user already exists!');</script>";
+                    echo "<script>window.location.href = 'userDashboard.php';</script>";
+                }
             }
         }
     }

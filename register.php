@@ -39,12 +39,12 @@
             <input type="password" placeholder="Enter password..." name="password"><br> 
             <span class="error" id="errorpassword"></span><br> 
 
-            <label for="user_type" class="arrangeLabel" id="pak5">Role: </label><br>
+            <label for="user_type" class="arrangeLabel" id="pak5">Role: </label>
                 <select name="user_type" id="selection" class="test">
                 <option value="user">user</option>
                 <option value="admin">admin</option>
                 </select><br>
-
+            
             
             
             <input type="submit" name ="submit" value="Register" id="dnButt"><br>

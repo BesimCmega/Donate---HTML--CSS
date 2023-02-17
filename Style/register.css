@@ -61,7 +61,7 @@ input{
 
 #pak5{
     position: relative;
-    left: 100px;
+    right: 64px;
 }
 
  input[type=text]:focus,
@@ -116,6 +116,8 @@ input{
         border-radius: 0.25em;
         background-color: #fff;
         color: #444;
+        position: relative;
+        right: 50px;
       }
       
       .test:focus {
