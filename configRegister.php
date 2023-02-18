@@ -44,14 +44,14 @@ class DatabaseRegister
             $surname = $_POST['surname'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $user_type = $_POST['user_type'];
+            //$user_type = $_POST['user_type'];
 
             if ($this->emailExists()) {
                 echo "<script>alert('A user with this email already exists!')</script>";
                 echo "<script>window.location.href = 'register.php';</script>";
                 return;
             } else {
-                $query = "INSERT INTO register(name, surname, email, password, user_type) VALUES ('$name', '$surname','$email', '$password', '$user_type')";
+                $query = "INSERT INTO register(name, surname, email, password, user_type) VALUES ('$name', '$surname','$email', '$password', 'user')";
                 if ($sql = $this->conn->query($query)) {
                     echo "<script>alert('You have been registered successfully!!');</script>";
                     echo "<script>window.location.href = 'login.php';</script>";
