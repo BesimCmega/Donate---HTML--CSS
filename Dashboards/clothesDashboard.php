@@ -35,7 +35,6 @@
         include '../configDonateClothes.php';
         $clothes = new DatabaseDonateClothes();
         $rows = $clothes->fetch();
-       
         if(!empty($rows)){
         foreach($rows as $row){ 
        ?>
@@ -48,9 +47,10 @@
                 <td><?php echo $row['phoneNumber']; ?></td>
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['clothes']; ?></td>
-                <td><?php echo $row['images']; ?></td>
+                <td><img src="../Fotot/<?php echo $row['images']; ?>" width="300px" height="200px"></td>
                 <td>
                   <a href="clothesDelete.php?id=<?php echo $row['id']; ?>" class="btn btn1">Delete</a>
+                  
                   
                 </td>
               </tr>

@@ -57,3 +57,17 @@ h1{
     font-size: 16px;
     margin-top: 10px;
 }
+
+.top-left-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #537FE7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  

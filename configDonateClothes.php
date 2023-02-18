@@ -15,6 +15,7 @@ class DatabaseDonateClothes{
         }       
     }
 
+    
     public function insert(){
         if(isset($_POST['submit'])){
     
@@ -24,14 +25,8 @@ class DatabaseDonateClothes{
             $number = $_POST['number'];
             $adress = $_POST['adress'];
             $clothes = $_POST['clothes'];
-            //$image = $_FILES['image'];
-
-            $tempname = $_FILES['image']['tmp_name'];
-            $originalname =$_FILES['image']['name'];
-            $size =($_FILES['image']['size']/5242888). "MB<br>";
-            $type=$_FILES['image']['type'];
-            $image=$_FILES['image']['name'];
-            move_uploaded_file($_FILES['image']['tmp_name'],"Fotot/".$_FILES['image']['name']);
+            $image = $_POST['image'];
+            
             
     
             $query = "INSERT INTO donate_clothes(name, surname, email, phoneNumber, address, clothes, images) VALUES ('$name', '$surname','$email', '$number', '$adress', '$clothes', '$image')";
@@ -136,7 +131,7 @@ class DatabaseDonateClothes{
     }
 
     public function edit($id){
-
+        
         $data = null;
 
         $query = "SELECT * FROM donate_clothes WHERE id = '$id'";

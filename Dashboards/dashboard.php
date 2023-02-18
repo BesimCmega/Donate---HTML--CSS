@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../Style/dashboard.css">
     <title>Main Dashboard</title>
 </head>
-<body>
+<body><br>
+	<a href="../index.php"><button class="top-left-btn">Log Out</button></a>
     <br><br>
     <h1>Dashboard</h1>
     <div class="container">

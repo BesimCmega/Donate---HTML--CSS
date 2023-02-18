@@ -42,7 +42,7 @@
             <label for="user_type" class="arrangeLabel" id="pak5">Role: </label>
                 <select name="user_type" id="selection" class="test">
                 <option value="user">user</option>
-                <option value="admin">admin</option>
+                <!-- <option value="admin">admin</option> -->
                 </select><br>
             
             
